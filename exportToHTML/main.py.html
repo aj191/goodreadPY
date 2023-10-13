@@ -1,0 +1,170 @@
+<html>
+<head>
+<title>main.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #cf8e6d;}
+.s3 { color: #bcbec4;}
+.s4 { color: #2aacb8;}
+.s5 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.py</font>
+</center></td></tr></table>
+<pre><span class="s0">###AH 10/13/23 this is an AIless Star geneRATING system for book lovers on Good Reads. NO MORE all the same reviews</span>
+<span class="s2">def </span><span class="s1">main</span><span class="s3">():</span>
+    <span class="s0"># Initialize the score</span>
+    <span class="s1">score </span><span class="s3">= </span><span class="s4">0</span>
+
+    <span class="s0"># Define a list of questions, where each question is a dictionary</span>
+    <span class="s1">questions </span><span class="s3">= [</span>
+        <span class="s3">{</span>
+            <span class="s5">&quot;question&quot;</span><span class="s3">: </span><span class="s5">&quot;1) How did you feel as soon as you had finished the book?&quot;</span><span class="s3">,</span>
+            <span class="s5">&quot;answers&quot;</span><span class="s3">: [</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">1</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Wowed and sad it's over&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">5</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">2</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Emotional&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">4</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">3</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Content&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">3</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">4</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Meh&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">2</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">5</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Thankfully it's over&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">1</span><span class="s3">}</span>
+            <span class="s3">]</span>
+        <span class="s3">},</span>
+        <span class="s3">{</span>
+            <span class="s5">&quot;question&quot;</span><span class="s3">: </span><span class="s5">&quot;2) Would you recommend?&quot;</span><span class="s3">,</span>
+            <span class="s5">&quot;answers&quot;</span><span class="s3">: [</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">1</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Very likely (Yelling from rooftops)&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">5</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">2</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Likely (sure for the right person)&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">4</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">3</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Neither likely nor unlikely (I don't even remember this book I just read)&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">3</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">4</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Unlikely except for that one friend&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">2</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">5</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Never ever&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">1</span><span class="s3">}</span>
+            <span class="s3">]</span>
+        <span class="s3">},</span>
+        <span class="s3">{</span>
+            <span class="s5">&quot;question&quot;</span><span class="s3">: </span><span class="s5">&quot;3) Plot: I NEEDED TO find out what happened next? Was it too predictable??&quot;</span><span class="s3">,</span>
+            <span class="s5">&quot;answers&quot;</span><span class="s3">: [</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">1</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Stayed up late, turning pages&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">5</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">2</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Average&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">3</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">3</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Predictable&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">1</span><span class="s3">}</span>
+            <span class="s3">]</span>
+
+        <span class="s3">},</span>
+        <span class="s3">{</span>
+            <span class="s5">&quot;question&quot;</span><span class="s3">: </span><span class="s5">&quot;4) How engaged were you in the story?&quot;</span><span class="s3">,</span>
+            <span class="s5">&quot;answers&quot;</span><span class="s3">: [</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">1</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Extremely Engaged&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">5</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">2</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Very Engaged&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">4</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">3</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Somewhat Engaged&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">3</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">4</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Not So Engaged&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">2</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">5</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;ZERO engagement, tell me when it's over zzz&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">1</span><span class="s3">}</span>
+            <span class="s3">]</span>
+        <span class="s3">},</span>
+        <span class="s3">{</span>
+            <span class="s5">&quot;question&quot;</span><span class="s3">: </span><span class="s5">&quot;5) Did you feel an extreme emotion? I.e., excited? Shocked? Moved? Appropriately Angered?&quot;</span><span class="s3">,</span>
+            <span class="s5">&quot;answers&quot;</span><span class="s3">: [</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">1</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;A great deal of emotion&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">5</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">2</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;A lot more emotional than the average book&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">4</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">3</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Normal emotional commitment&quot;</span><span class="s3">,</span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">3</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">4</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Less than normal emotion&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">2</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">5</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;I felt nothing&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">1</span><span class="s3">}</span>
+            <span class="s3">]</span>
+        <span class="s3">},</span>
+        <span class="s3">{</span>
+            <span class="s5">&quot;question&quot;</span><span class="s3">: </span><span class="s5">&quot;6) Characters...&quot;</span><span class="s3">,</span>
+            <span class="s5">&quot;answers&quot;</span><span class="s3">: [</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">1</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Exceeded expectations (deep and unique)&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">5</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">2</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Average characters found in novels&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">3</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">3</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Below expectations (one note, boring, no depth)&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">1</span><span class="s3">}</span>
+            <span class="s3">]</span>
+
+        <span class="s3">},</span>
+        <span class="s3">{</span>
+            <span class="s5">&quot;question&quot;</span><span class="s3">: </span><span class="s5">&quot;7) Grammar, sentence structure?&quot;</span><span class="s3">,</span>
+            <span class="s5">&quot;answers&quot;</span><span class="s3">: [</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">1</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Very high quality, I will quote and remember such beautifully written sentences&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">5</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">2</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;High quality, compared to other books&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">4</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">3</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Average&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">3</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">4</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Less than average&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">2</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">5</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Who wrote this crap?&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">1</span><span class="s3">}</span>
+            <span class="s3">]</span>
+        <span class="s3">},</span>
+        <span class="s3">{</span>
+            <span class="s5">&quot;question&quot;</span><span class="s3">: </span><span class="s5">&quot;8) Would you reread?.&quot;</span><span class="s3">,</span>
+            <span class="s5">&quot;answers&quot;</span><span class="s3">: [</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">1</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Yes&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">5</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">2</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;Probably not! Not because it was bad, just so many other books out there&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">3</span><span class="s3">},</span>
+                <span class="s3">{</span><span class="s5">&quot;index&quot;</span><span class="s3">: </span><span class="s4">3</span><span class="s3">, </span><span class="s5">&quot;displayed_option&quot;</span><span class="s3">: </span><span class="s5">&quot;No EVER EVER AGAIN&quot;</span><span class="s3">, </span><span class="s5">&quot;score&quot;</span><span class="s3">: </span><span class="s4">1</span><span class="s3">}</span>
+            <span class="s3">]</span>
+
+        <span class="s3">}</span>
+    <span class="s3">]</span>
+
+    <span class="s0"># Iterate through the list of questions (NERD ALERT)</span>
+    <span class="s2">for </span><span class="s1">question_data </span><span class="s2">in </span><span class="s1">questions</span><span class="s3">:</span>
+        <span class="s1">question </span><span class="s3">= </span><span class="s1">question_data</span><span class="s3">[</span><span class="s5">&quot;question&quot;</span><span class="s3">]</span>
+        <span class="s1">answers </span><span class="s3">= </span><span class="s1">question_data</span><span class="s3">[</span><span class="s5">&quot;answers&quot;</span><span class="s3">]</span>
+
+        <span class="s2">while True</span><span class="s3">:</span>
+            <span class="s1">print</span><span class="s3">(</span><span class="s1">question</span><span class="s3">)</span>
+            <span class="s2">for </span><span class="s1">answer </span><span class="s2">in </span><span class="s1">answers</span><span class="s3">:</span>
+                <span class="s1">print</span><span class="s3">(</span><span class="s5">f&quot;</span><span class="s2">{</span><span class="s1">answer</span><span class="s3">[</span><span class="s5">'index'</span><span class="s3">]</span><span class="s2">}</span><span class="s5">. </span><span class="s2">{</span><span class="s1">answer</span><span class="s3">[</span><span class="s5">'displayed_option'</span><span class="s3">]</span><span class="s2">}</span><span class="s5">&quot;</span><span class="s3">)</span>
+
+            <span class="s1">user_choice </span><span class="s3">= </span><span class="s1">input</span><span class="s3">(</span><span class="s5">&quot;Enter the number corresponding to your answer: &quot;</span><span class="s3">)</span>
+
+            <span class="s2">try</span><span class="s3">:</span>
+                <span class="s1">user_choice </span><span class="s3">= </span><span class="s1">int</span><span class="s3">(</span><span class="s1">user_choice</span><span class="s3">)</span>
+                <span class="s2">if </span><span class="s4">1 </span><span class="s3">&lt;= </span><span class="s1">user_choice </span><span class="s3">&lt;= </span><span class="s1">len</span><span class="s3">(</span><span class="s1">answers</span><span class="s3">):</span>
+                    <span class="s1">score </span><span class="s3">+= </span><span class="s1">answers</span><span class="s3">[</span><span class="s1">user_choice </span><span class="s3">- </span><span class="s4">1</span><span class="s3">][</span><span class="s5">&quot;score&quot;</span><span class="s3">]</span>
+                    <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;*&quot; </span><span class="s3">* </span><span class="s4">40</span><span class="s3">)</span>
+                    <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;</span><span class="s2">\n</span><span class="s5">&quot;</span><span class="s3">)</span>
+                    <span class="s2">break</span>
+                <span class="s2">else</span><span class="s3">:</span>
+                    <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;!!&quot; </span><span class="s3">* </span><span class="s4">10</span><span class="s3">)</span>
+                    <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;ERROR!!!!Invalid choice. Please choose a valid option. TRY AGAIN&quot;</span><span class="s3">)</span>
+                    <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;!!&quot; </span><span class="s3">* </span><span class="s4">10</span><span class="s3">)</span>
+            <span class="s2">except </span><span class="s1">ValueError</span><span class="s3">:</span>
+                <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;#&quot; </span><span class="s3">* </span><span class="s4">10</span><span class="s3">)</span>
+                <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;ERROR####Invalid input. Please enter a number.&quot;</span><span class="s3">)</span>
+                <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;#&quot; </span><span class="s3">* </span><span class="s4">10</span><span class="s3">)</span>
+
+
+    <span class="s0">#print(&quot;-&quot; * 40)</span>
+    <span class="s0"># Display the final score</span>
+    <span class="s0">#print(&quot;Your score is:&quot;, score)</span>
+    <span class="s0">#score= (score/40)*100</span>
+    <span class="s1">print </span><span class="s3">(</span><span class="s1">score</span><span class="s3">)</span>
+    <span class="s2">if </span><span class="s1">score </span><span class="s3">&lt;= </span><span class="s4">20</span><span class="s3">:</span>
+        <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;*&quot;</span><span class="s3">)</span>
+        <span class="s1">print </span><span class="s3">(</span><span class="s5">&quot;Nerdy generator says..GIVE IT 1 Star! *, you really did not like this book&quot;</span><span class="s3">)</span>
+        <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;*&quot;</span><span class="s3">)</span>
+    <span class="s2">elif </span><span class="s1">score </span><span class="s3">&gt; </span><span class="s4">20 </span><span class="s2">and </span><span class="s1">score </span><span class="s3">&lt;= </span><span class="s4">40</span><span class="s3">:</span>
+        <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;**&quot;</span><span class="s3">)</span>
+        <span class="s1">print </span><span class="s3">(</span><span class="s5">&quot;Nerdy generator says..2 STARS **, below average&quot;</span><span class="s3">)</span>
+        <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;**&quot;</span><span class="s3">)</span>
+    <span class="s2">elif </span><span class="s1">score </span><span class="s3">&gt; </span><span class="s4">40 </span><span class="s2">and </span><span class="s1">score </span><span class="s3">&lt;= </span><span class="s4">60</span><span class="s3">:</span>
+        <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;***&quot;</span><span class="s3">)</span>
+        <span class="s1">print </span><span class="s3">(</span><span class="s5">&quot;Nerdy generator says..3 STARS ***, your average book&quot;</span><span class="s3">)</span>
+        <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;***&quot;</span><span class="s3">)</span>
+    <span class="s2">elif </span><span class="s1">score </span><span class="s3">&gt; </span><span class="s4">60 </span><span class="s2">and </span><span class="s1">score </span><span class="s3">&lt;= </span><span class="s4">80</span><span class="s3">:</span>
+        <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;****&quot;</span><span class="s3">)</span>
+        <span class="s1">print </span><span class="s3">(</span><span class="s5">&quot;Nerdy generator says..4 STARS ****, you liked this book!&quot;</span><span class="s3">)</span>
+        <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;****&quot;</span><span class="s3">)</span>
+    <span class="s2">elif </span><span class="s1">score </span><span class="s3">&gt; </span><span class="s4">80 </span><span class="s2">and </span><span class="s1">score </span><span class="s3">&lt;= </span><span class="s4">100</span><span class="s3">:</span>
+        <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;*****&quot;</span><span class="s3">)</span>
+        <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;Nerdy generator says..5 STARS *****, YOU LOVED this book&quot;</span><span class="s3">)</span>
+        <span class="s1">print</span><span class="s3">(</span><span class="s5">&quot;*****&quot;</span><span class="s3">)</span>
+    <span class="s2">else</span><span class="s3">:</span>
+        <span class="s1">print </span><span class="s3">(</span><span class="s5">&quot;opps i am broken!&quot;</span><span class="s3">)</span>
+    <span class="s1">quit</span><span class="s3">()</span>
+
+
+<span class="s2">if </span><span class="s1">__name__ </span><span class="s3">== </span><span class="s5">&quot;__main__&quot;</span><span class="s3">:</span>
+    <span class="s1">main</span><span class="s3">()</span>
+
+</pre>
+</body>
+</html>
